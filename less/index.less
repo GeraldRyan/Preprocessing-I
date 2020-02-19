@@ -4,77 +4,211 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin        : 0;
+	padding       : 0;
+	border        : 0;
+	font-size     : 100%;
+	font          : inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
-	border-spacing: 0;
+	border-spacing : 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-		height: 100%;
+html,
+body {
+	height: 100%;
 }
-// @font-color: green;
+
+// @font-color : green;
 // h2{font-size:100px;color:@font-color;}
+h2 {
+	font-size: 3.0rem;
+}
 
-header{
-	display:flex;
-	justify-content:flex-start;
-	background-color:rgb(71, 71, 71);
-	color:white;
-	.personal-info{
+h3 {
+	font-size: 2.5rem;
+
+}
+
+p {
+	font-size: 1.5rem;
+}
+
+header {
+	display         : flex;
+	justify-content : flex-start;
+	background-color: rgb(71, 71, 71);
+	color           : white;
+
+	.personal-info {
 		align-self: flex-end;
 	}
-	.content-box{
-		text-shadow: 12px 7px 9px black;
+
+	.content-box {
+		text-shadow  : 12px 7px 9px black;
 		// box-shadow: 16px 20px 10px black;
-		line-height: 2rem;
-		h2{
-			font-size:3.0rem;
-		}
-		p{font-size:1.5rem;}
+		line-height  : 2rem;
+
 	}
-	
+}
+
+.content-container {
+	display    : flex;
+	align-items: center;
+	border     : 1px solid red;
+
+	.green-col {
+		background-color: rgb(7, 75, 7);
+		align-self      : stretch;
+		width           : 25%;
+	}
+
+	.sections-container {
+		display       : flex;
+		flex-direction: column;
+		flex          : 1;
+		border        : 1px solid red;
+
+		section {
+			border: 1px solid red;
+			h3{
+				font-size:2rem;
+
+			}
+			p{
+				font-size:1rem;
+			}
+		}
+	}
+}
+
+footer{
+padding:1rem;
+	text-align: center;
 }
