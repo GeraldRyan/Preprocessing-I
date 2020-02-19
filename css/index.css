@@ -134,3 +134,22 @@ html,
 body {
   height: 100%;
 }
+header {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #474747;
+  color: white;
+}
+header .personal-info {
+  align-self: flex-end;
+}
+header .content-box {
+  text-shadow: 12px 7px 9px black;
+  line-height: 2rem;
+}
+header .content-box h2 {
+  font-size: 3rem;
+}
+header .content-box p {
+  font-size: 1.5rem;
+}
