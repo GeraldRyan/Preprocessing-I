@@ -161,6 +161,9 @@ body {
 	font-size:1.5rem;
 	a:link, a:visited{
 		color:white;
+		@media(max-width: 500px){
+			font-size:1rem;
+		}
 	}
 	a:hover{
 		color:grey;
@@ -181,26 +184,32 @@ p {
 
 
 nav{
+
+	background-color:@themecolor;
 	// display:flex;
 	// justify-content: space-between;
-	background-color:@themecolor;
-
 	.displayflex(space-around);
 	.whitefont();
 	a{
-	text-decoration: none;
-}
+	text-decoration: none;}
+	@media(max-width: 500px){
+		width:100%;
+	}
 }
 
 header {
-	display         : flex;
-	justify-content : flex-start;
+	display: flex;
+	justify-content: flex-start;
 	background-color: @headercolor;
-	color           : white;
+	color: white;
 
+	@media(max-width: 500px){
+		padding: 20px 0 15px 0;
+		justify-content: center;
+	img{display:none;}}
+	
 	.personal-info {
 		align-self: flex-end;
-	}
 
 	.content-box {
 		text-shadow  : 12px 7px 9px black;
@@ -210,25 +219,51 @@ header {
 		h2{
 			padding: 0 0 15px 0;
 		}
+		@media(max-width: 500px){
+			text-align: center;
+			padding: 0;
+		 	p{ font-size:1rem;}
+			}
+		}
 	}
 }
 .intro{ background-color:tan;
 padding: 10px 15px;
 margin: 0 -15px;
-h3{font-size: 1.8rem;}}
+h3{font-size: 1.8rem;}
+@media(max-width: 500px){
+	margin:0;
+	text-align: center;
+h3{font-size:1rem;}
+}
+}
+
+
 .content-container {
 	display    : flex;
 	align-items: center;
 	// border     : 1px solid red;
 // font-style: italic;
 // font-weight: bold;
+@media(max-width: 500px){
+flex-direction: column;
+}
+
 	.green-col {
 		background-color:@themecolor;
 		align-self      : stretch;
 		width           : 25%;
+		@media(max-width: 500px){
+		min-height:80px;
+		width:100%;
+		}
+
 	}
 
 	.sections-container {
+		@media(max-width: 500px){
+			text-align: center;
+			}
 		display       : flex;
 		flex-direction: column;
 		flex          : 1;
@@ -242,6 +277,9 @@ h3{font-size: 1.8rem;}}
 			// margin: 0 0 15px 0;
 
 			padding: 30px 0 30px 30px;
+			@media(max-width: 500px){
+				padding:30px 0;
+				}
 			h3{
 				padding: 25px 0;
 				font-size:2rem;
@@ -257,6 +295,9 @@ h3{font-size: 1.8rem;}}
 				white-space:pre-wrap;
 				font-size:1rem;
 				padding: 10px 0;
+				@media(max-width: 500px){
+					white-space: normal;
+					}
 			}
 			span{
 				font-weight:normal;
@@ -273,10 +314,14 @@ height:1px;
 footer{
 padding:1rem;
 	text-align: center;
+	background-color: goldenrod;
 }
 body{
 	max-width:97%;
 	margin:auto;
+	@media(max-width: 500px){
+		max-width: 100%;
+}
 }
 br{
 	display:none;
