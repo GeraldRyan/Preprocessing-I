@@ -179,6 +179,14 @@ header .content-box {
 header .content-box h2 {
   padding: 0 0 15px 0;
 }
+.intro {
+  background-color: tan;
+  padding: 10px 15px;
+  margin: 0 -15px;
+}
+.intro h3 {
+  font-size: 1.8rem;
+}
 .content-container {
   display: flex;
   align-items: center;
