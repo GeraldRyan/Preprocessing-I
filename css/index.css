@@ -145,7 +145,7 @@ p {
   font-size: 1.5rem;
 }
 nav {
-  background-color: red;
+  background-color: #074b07;
   display: flex;
   justify-content: space-around;
   color: white;
@@ -235,7 +235,7 @@ header .personal-info .content-box h2 {
   }
 }
 .content-container .green-col {
-  background-color: red;
+  background-color: #074b07;
   align-self: stretch;
   width: 25%;
 }
