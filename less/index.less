@@ -146,21 +146,50 @@ body {
 	height: 100%;
 }
 
-@maincolor : rgb(7, 75, 7);
+// Create some global vars
+@themecolor : rgb(7, 75, 7);
 @headercolor:  rgb(71, 71, 71);
 @lightcellshade: rgb(243, 243, 243);
-// h2{font-size:100px;color:@font-color;}
+// Mixin Repo
+.displayflex(@justify:space-between){
+	display:flex;
+	justify-content:@justify;
+}
+.whitefont(){
+	color:white;
+	font-weight: bold;
+	font-size:2rem;
+	a:link, a:visited{
+		color:white;
+	}
+	a:hover{
+		color:grey;
+	}
+}
+
+// general font sizes
 h2 {
 	font-size: 3.0rem;
 }
-
 h3 {
 	font-size: 2.5rem;
-
 }
-
 p {
 	font-size: 1.5rem;
+}
+
+
+
+nav{
+	// display:flex;
+	// justify-content: space-between;
+	background-color:@themecolor;
+
+	.displayflex(space-around);
+	.whitefont();
+	a{
+	text-decoration: none;
+}
 }
 
 header {
@@ -177,7 +206,10 @@ header {
 		text-shadow  : 12px 7px 9px black;
 		// box-shadow: 16px 20px 10px black;
 		line-height  : 2rem;
-
+		padding: 0 0 25px 30px;
+		h2{
+			padding: 0 0 15px 0;
+		}
 	}
 }
 
@@ -188,7 +220,7 @@ header {
 // font-style: italic;
 // font-weight: bold;
 	.green-col {
-		background-color:@maincolor;
+		background-color:@themecolor;
 		align-self      : stretch;
 		width           : 25%;
 	}
@@ -205,18 +237,21 @@ header {
 		section {
 			// border: 1px solid red;
 			// margin: 0 0 15px 0;
-			padding: 15px 0 15px 10px;
+			padding: 30px 0 30px 30px;
 			h3{
+				padding: 25px 0;
 				font-size:2rem;
 
 			}
 			h4{
 				font-size:1.15rem;
 				font-weight:bold;
+				padding: 10px 0;
 			}
 			 p{
 				white-space:pre;
 				font-size:1rem;
+				padding: 10px 0;
 			}
 			span{
 				font-weight:normal;
@@ -237,4 +272,7 @@ padding:1rem;
 body{
 	max-width:97%;
 	margin:auto;
+}
+br{
+	display:none;
 }
