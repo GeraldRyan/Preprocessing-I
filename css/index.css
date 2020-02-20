@@ -63,6 +63,7 @@ thead,
 tr,
 th,
 td,
+hr,
 article,
 aside,
 canvas,
@@ -159,7 +160,6 @@ header .content-box {
 .content-container {
   display: flex;
   align-items: center;
-  border: 1px solid red;
 }
 .content-container .green-col {
   background-color: #074b07;
@@ -170,18 +170,37 @@ header .content-box {
   display: flex;
   flex-direction: column;
   flex: 1;
-  border: 1px solid red;
+}
+.content-container .sections-container section:nth-child(odd) {
+  background-color: #f3f3f3;
 }
 .content-container .sections-container section {
-  border: 1px solid red;
+  padding: 15px 0 15px 10px;
 }
 .content-container .sections-container section h3 {
   font-size: 2rem;
 }
+.content-container .sections-container section h4 {
+  font-size: 1.15rem;
+  font-weight: bold;
+}
 .content-container .sections-container section p {
+  white-space: pre;
   font-size: 1rem;
+}
+.content-container .sections-container section span {
+  font-weight: normal;
+  font-style: italic;
+}
+hr {
+  height: 1px;
+  background-color: #474747;
 }
 footer {
   padding: 1rem;
   text-align: center;
+}
+body {
+  max-width: 97%;
+  margin: auto;
 }
